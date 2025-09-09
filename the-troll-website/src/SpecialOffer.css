@@ -1,0 +1,389 @@
+/* SpecialOffer.css */
+.special-offer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #ff00cc, #ffcc00, #00ffcc, #cc00ff);
+    background-size: 400% 400%;
+    animation: gradientBackground 15s ease infinite;
+    color: #fff;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    text-align: center;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+@keyframes gradientBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.floating-emojis {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.floating-emoji {
+    position: absolute;
+    font-size: 2rem;
+    animation: float 6s ease-in-out infinite;
+    opacity: 0.7;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.7;
+    }
+
+    90% {
+        opacity: 0.7;
+    }
+
+    100% {
+        transform: translateY(-100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.loading-title {
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+    text-shadow: 3px 3px 0 #000, 6px 6px 0 rgba(0, 0, 0, 0.2);
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 3px 3px 0 #000, 6px 6px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    to {
+        text-shadow: 3px 3px 0 #000, 6px 6px 20px rgba(255, 255, 255, 0.5);
+    }
+}
+
+.progress-container {
+    width: 80%;
+    max-width: 500px;
+    margin: 2rem 0;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 30px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    overflow: hidden;
+    border: 3px solid #fff;
+}
+
+.progress-fill {
+    height: 100%;
+    width: 87.3%;
+    background: linear-gradient(90deg, #ff00cc, #ffcc00);
+    animation: progressPulse 2s infinite;
+    border-radius: 12px;
+}
+
+@keyframes progressPulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.7;
+    }
+}
+
+.progress-text {
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.loading-message {
+    font-size: 1.5rem;
+    margin: 1.5rem 0;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    border: 2px dashed #fff;
+    animation: messageFade 2s ease-in-out;
+}
+
+@keyframes messageFade {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.disclaimer {
+    background: rgba(255, 0, 0, 0.2);
+    padding: 1rem;
+    border-radius: 10px;
+    margin: 1.5rem 0;
+    border: 2px solid red;
+    animation: warningPulse 1s infinite;
+}
+
+@keyframes warningPulse {
+
+    0%,
+    100% {
+        border-color: red;
+    }
+
+    50% {
+        border-color: yellow;
+    }
+}
+
+.prize-description {
+    font-size: 1.8rem;
+    margin: 2rem 0 1rem 0;
+    text-decoration: underline;
+}
+
+.prize-features {
+    text-align: left;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 1.5rem;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+    border: 3px solid gold;
+}
+
+.prize-features li {
+    margin: 0.8rem 0;
+    font-size: 1.2rem;
+}
+
+.troll-button {
+    font-size: 2rem;
+    padding: 1.5rem 3rem;
+    background: linear-gradient(45deg, #ff0000, #ff9900);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 10px 0 #cc0000, 0 15px 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease;
+    margin: 2rem 0;
+    animation: buttonBounce 1s infinite alternate;
+}
+
+@keyframes buttonBounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+.troll-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 0 #cc0000, 0 20px 25px rgba(0, 0, 0, 0.3);
+}
+
+.troll-button:active {
+    transform: translateY(5px);
+    box-shadow: 0 5px 0 #cc0000, 0 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+.fake-notification {
+    background: rgba(0, 255, 0, 0.2);
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    margin-top: 1rem;
+    border: 2px solid #00ff00;
+    position: relative;
+    font-weight: bold;
+}
+
+.notification-badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: red;
+    color: white;
+    border-radius: 50%;
+    padding: 0.5rem;
+    min-width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: badgePulse 1s infinite;
+}
+
+@keyframes badgePulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.trolled-message {
+    animation: trolledFadeIn 1s ease-in;
+}
+
+@keyframes trolledFadeIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.trolled-title {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    text-shadow: 4px 4px 0 #000;
+    animation: rainbow 3s infinite linear;
+}
+
+@keyframes rainbow {
+    0% {
+        color: red;
+    }
+
+    14% {
+        color: orange;
+    }
+
+    28% {
+        color: yellow;
+    }
+
+    42% {
+        color: green;
+    }
+
+    57% {
+        color: blue;
+    }
+
+    71% {
+        color: indigo;
+    }
+
+    85% {
+        color: violet;
+    }
+
+    100% {
+        color: red;
+    }
+}
+
+.trolled-animation {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.spinning-emoji {
+    font-size: 4rem;
+    animation: spin 2s infinite linear;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+
+    50% {
+        transform: rotate(180deg) scale(1.5);
+    }
+
+    100% {
+        transform: rotate(360deg) scale(1);
+    }
+}
+
+.trolled-text {
+    font-size: 1.8rem;
+    margin: 2rem 0;
+}
+
+.countdown {
+    font-size: 2rem;
+    font-weight: bold;
+    animation: countdownBlink 1s infinite;
+}
+
+@keyframes countdownBlink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .loading-title {
+        font-size: 2.5rem;
+    }
+
+    .trolled-title {
+        font-size: 2.5rem;
+    }
+
+    .troll-button {
+        font-size: 1.5rem;
+        padding: 1rem 2rem;
+    }
+
+    .prize-features li {
+        font-size: 1rem;
+    }
+}

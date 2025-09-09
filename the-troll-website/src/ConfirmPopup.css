@@ -1,0 +1,128 @@
+/* ConfirmPopup.css */
+.confirm-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.confirm-popup {
+    background: linear-gradient(135deg, #ffffff, #f8f9fa);
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    animation: slideIn 0.3s ease-out;
+    border: 1px solid #e0e0e0;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.confirm-popup h2 {
+    margin: 0 0 1.5rem 0;
+    color: #333;
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.popup-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.popup-button {
+    padding: 0.8rem 1.8rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    min-width: 100px;
+}
+
+.yes-button {
+    background: linear-gradient(to bottom, #4caf50, #45a049);
+    color: white;
+    box-shadow: 0 3px 0 #388e3c;
+}
+
+.yes-button:hover {
+    background: linear-gradient(to bottom, #45a049, #3d8b40);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 0 #388e3c;
+}
+
+.yes-button:active {
+    transform: translateY(1px);
+    box-shadow: 0 1px 0 #388e3c;
+}
+
+.no-button {
+    background: linear-gradient(to bottom, #f44336, #d32f2f);
+    color: white;
+    box-shadow: 0 3px 0 #c62828;
+}
+
+.no-button:hover {
+    background: linear-gradient(to bottom, #d32f2f, #c62828);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 0 #c62828;
+}
+
+.no-button:active {
+    transform: translateY(1px);
+    box-shadow: 0 1px 0 #c62828;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+    .confirm-popup {
+        padding: 1.5rem;
+    }
+
+    .confirm-popup h2 {
+        font-size: 1.2rem;
+    }
+
+    .popup-buttons {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .popup-button {
+        width: 100%;
+    }
+}
