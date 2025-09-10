@@ -3,7 +3,9 @@ import Home from "./Home";
 import Home2 from "./Home2";
 import SpecialOffer from "./SpecialOffer";
 import HowToMakeToast from "./HowToMakeToast";
-
+import ClownPage from "./ClownPage";
+import JokerPlayground from "./JokerPlayground";
+import InfiniteScrollPage from "./InfiniteScrollPage";
 
 function App() {
   return (
@@ -13,6 +15,9 @@ function App() {
         <Route path="/home2" element={<Home2 />} />
         <Route path="/special-offer" element={<SpecialOffer />} />
         <Route path="/how-to-make-toast" element={<HowToMakeToast />} />
+        <Route path="/clown-page" element={<ClownPage/>}/> 
+        <Route path="/joker-playground" element={<JokerPlayground/>}/>
+        <Route path="/infinite-scroll-page" element={<InfiniteScrollPage/>}/>
       </Routes>
     </Router>
   );

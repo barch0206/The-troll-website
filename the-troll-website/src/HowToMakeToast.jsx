@@ -1,28 +1,21 @@
 import React, { useState, useEffect } from "react";
 import "./HowToMakeToast.css";
+import { Link } from 'react-router-dom';
 
 export default function HowToMakeToast() {
   const [clownMode, setClownMode] = useState(false);
+
 
   // Auto trigger clown mode after 15 seconds
   useEffect(() => {
     const timer = setTimeout(() => {
       setClownMode(true);
       alert("HONK HONK HONKKKK HONK HONK! 🤡");
-    }, 15000);
+    }, 10000);
 
     return () => clearTimeout(timer);
   }, []);
 
-  // Extra: clown honk every 2s while in clown mode
-  useEffect(() => {
-    if (clownMode) {
-      const honkTimer = setInterval(() => {
-        console.log("HONK HONK 🤡");
-      }, 2000);
-      return () => clearInterval(honkTimer);
-    }
-  }, [clownMode]);
 
   return (
     <div className={clownMode ? "clown-body" : "normal-body"}>
@@ -153,14 +146,11 @@ export default function HowToMakeToast() {
           <div style={{ fontSize: "72px" }} className="spin">
             🤡
           </div>
-
-          {/* BACK BUTTON */}
-          <button
-            className="clown-button"
-            onClick={() => setClownMode(false)}
-          >
-            ESCAPE ESCAPE ESCAPEEEE THE CLOWN 🤡
-          </button>
+          <Link to="/clown-page">
+            <button className="clown-button">
+              ESCAPE ESCAPE ESCAPEEEE THE CLOWN 🤡
+            </button>
+          </Link>
         </div>
       )}
     </div>
