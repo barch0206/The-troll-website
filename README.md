@@ -24,4 +24,10 @@ React + CSS Animations + JavaScript Chaos + Pure Evil
 
 <img width="225" height="144" alt="image" src="https://github.com/user-attachments/assets/2151cfc0-964a-4630-b4be-274398b59a01" />
 
-You really thought the image will load, didnt you?
+
+<img width="225" height="144" alt="image" src="https://github.com/user-attachments/assets/2151cfc0-964a-4630-b4be-274398b59a01" />
+
+
+<img width="225" height="144" alt="image" src="https://github.com/user-attachments/assets/2151cfc0-964a-4630-b4be-274398b59a01" />
+
+You really thought the images will load, didnt you?
